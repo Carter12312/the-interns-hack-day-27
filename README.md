@@ -80,13 +80,13 @@ empty or occupied. Start it from the project root after installing the
 requirements:
 
 ```bash
-uvicorn parking_api.main:app --reload
+uvicorn api.main:app --reload
 ```
 
 Send a JPEG, PNG, or WebP image to the prediction endpoint:
 
 ```bash
-curl -X POST http://127.0.0.1:8000/predict \
+curl -X POST http://127.0.0.1:8000/api/v1/parking-lot/predict \
   -F "file=@parking-space.jpg"
 ```
 
@@ -100,5 +100,7 @@ Example response:
 }
 ```
 
-Interactive API documentation is available at `http://127.0.0.1:8000/docs`,
-and `GET /health` reports whether the model checkpoint is present.
+Interactive API documentation is available at `http://127.0.0.1:8000/docs`.
+`GET /health` reports the overall API status, while
+`GET /api/v1/parking-lot/health` reports whether the parking-lot model is
+available.

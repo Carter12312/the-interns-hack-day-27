@@ -13,7 +13,7 @@ from torchvision import transforms
 from torchvision.models import mobilenet_v3_small
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_MODEL_PATH = PROJECT_ROOT / "models" / "mobilenet_v3_small_pklot.pt"
 
 
@@ -38,7 +38,9 @@ class ParkingSpotPredictor:
 
         image_size = int(checkpoint.get("image_size", 160))
         model = mobilenet_v3_small(weights=None)
-        model.classifier[-1] = nn.Linear(model.classifier[-1].in_features, len(self.classes))
+        model.classifier[-1] = nn.Linear(
+            model.classifier[-1].in_features, len(self.classes)
+        )
         model.load_state_dict(checkpoint["model_state"])
         model.eval()
         self.model = model
