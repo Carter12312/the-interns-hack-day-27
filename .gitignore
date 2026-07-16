@@ -1,0 +1,10 @@
+data/
+.venv/
+__pycache__/
+*.py[cod]
+.idea/
+!.idea/
+.idea/*
+!.idea/runConfigurations/
+!.idea/runConfigurations/Train_MobileNet.xml
+.cache/
