@@ -1,136 +1,131 @@
-# Parking Lot Occupancy
+# Parking Lot API
 
-Download the PKLot dataset and create a CSV containing the occupied, empty, and
-total spot counts for every annotated parking-lot image.
+The API classifies individual parking spaces and analyzes complete images that
+use the included sample parking-lot layout.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python parking-lot-bot/load_data.py
-```
-
-The Kaggle client requires an API token. Create one in your Kaggle account
-settings and save it as `~/.kaggle/kaggle.json`, or set the `KAGGLE_USERNAME`
-and `KAGGLE_KEY` environment variables.
-
-The script downloads data into `data/pklot/` and writes
-`data/pklot_manifest.csv`. To index an existing download instead, run:
-
-```bash
-python parking-lot-bot/load_data.py --skip-download --data-dir /path/to/pklot
-```
-
-Both the loader and training pipeline check for existing images plus supported
-COCO JSON or XML annotations before contacting Kaggle. Re-running them will use
-the existing `data/pklot/` download.
-
-The occupancy target is calculated as:
-
-```text
-occupancy_percentage = occupied_spots / total_spots * 100
-```
-
-## Train the model
-
-Install the dependencies and register the project environment as a Jupyter
-kernel:
+## Setup and run
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-python -m ipykernel install --user --name parking-lot-bot --display-name "Parking Lot Bot"
-jupyter lab
+python -m uvicorn api.main:app --reload
 ```
 
-Open `parking-lot-bot/train_mobilenet.ipynb`, choose the **Parking Lot Bot**
-kernel, and run all cells. The notebook downloads PKLot if necessary, prepares
-rotated parking-space crops, fine-tunes MobileNetV3-Small, saves the best model
-to `models/mobilenet_v3_small_pklot.pt`, and visualizes predictions on a full
-parking-lot image.
+The API runs at `http://127.0.0.1:8000`. Interactive OpenAPI documentation is
+available at `http://127.0.0.1:8000/docs`.
 
-By default, training uses a balanced demo subset: 2,500 empty and 2,500
-occupied training crops, plus 500 of each class for validation and testing.
-Change `MAX_SAMPLES_PER_CLASS` and `MAX_EVAL_SAMPLES_PER_CLASS` in the
-configuration cell if you want a different tradeoff. Set them to `None` to use
-every annotated parking space.
+Uploads must be JPEG, PNG, or WebP images no larger than 10 MB.
 
-### Run from PyCharm
+## Endpoints
 
-The project includes a **Train MobileNet** run configuration that uses
-`.venv/bin/python`. After reopening the project (or reloading run
-configurations), choose **Train MobileNet** in the toolbar and click Run.
+### `GET /health`
 
-The same IDE-friendly training script can be started from PyCharm's terminal:
+Returns the overall API status.
 
-```bash
-source .venv/bin/activate
-python parking-lot-bot/train_mobilenet.py
+```json
+{"status": "ok"}
 ```
 
-The notebook remains useful for inspecting intermediate crops and charts; the
-Python script runs the same training pipeline from beginning to end.
+### `GET /api/v1/parking-lot/health`
 
-## Run the prediction API
+Reports whether the parking-space classification model is available.
 
-The API accepts a cropped image of one parking space and predicts whether it is
-empty or occupied. Start it from the project root after installing the
-requirements:
-
-```bash
-uvicorn api.main:app --reload
+```json
+{
+  "status": "ok",
+  "model": "mobilenet_v3_small_pklot.pt"
+}
 ```
 
-Send a JPEG, PNG, or WebP image to the prediction endpoint:
+### `POST /api/v1/parking-lot/predict`
+
+Classifies a cropped image of one parking space. Send the image as multipart
+form data using the field name `file`.
 
 ```bash
 curl -X POST http://127.0.0.1:8000/api/v1/parking-lot/predict \
   -F "file=@parking-space.jpg"
 ```
 
-Example response:
+Response:
 
 ```json
 {
   "label": "occupied",
   "confidence": 0.97,
-  "probabilities": {"empty": 0.03, "occupied": 0.97}
+  "probabilities": {
+    "empty": 0.03,
+    "occupied": 0.97
+  }
 }
 ```
 
-Interactive API documentation is available at `http://127.0.0.1:8000/docs`.
-`GET /health` reports the overall API status, while
-`GET /api/v1/parking-lot/health` reports whether the parking-lot model is
-available.
+`confidence` and the values in `probabilities` range from `0` to `1`.
 
-### Analyze a complete sample parking lot
+### `POST /api/v1/parking-lot/analyze`
 
-The eight images in `parking_lot_samples/` share one annotated structure with
-five rows containing 22, 22, 22, 22, and 12 spaces. The API applies this known
-structure to the uploaded image and classifies every space:
+Classifies every known space in a complete image using the layout shared by the
+images in `parking_lot_samples/`. Send the image using the field name `file`.
 
 ```bash
 curl -X POST http://127.0.0.1:8000/api/v1/parking-lot/analyze \
   -F "file=@parking_lot_samples/parkingLotA.jpg"
 ```
 
-This route is intended for the sample camera layout. Its coordinates are
-normalized, so resized versions work, but an image from a different camera or
-lot requires another structure definition.
+Response structure:
 
-#### Parking-space identifier syntax
+```json
+{
+  "structure_id": "pklot-sample-layout-v1",
+  "row_count": 5,
+  "total_spots": 100,
+  "free_count": 16,
+  "occupied_count": 84,
+  "free_spot_ids": ["R01-S06", "R02-S09"],
+  "rows": [
+    {
+      "row": 1,
+      "spot_count": 22,
+      "free_count": 3,
+      "occupied_count": 19,
+      "spots": [
+        {
+          "id": "R01-S01",
+          "row": 1,
+          "number": 1,
+          "status": "occupied",
+          "confidence": 0.92,
+          "bounding_box": {
+            "x_min": 139.0,
+            "y_min": 165.0,
+            "x_max": 162.0,
+            "y_max": 205.0
+          }
+        }
+      ]
+    }
+  ]
+}
+```
 
-Space IDs use `Rrr-Sss`, where:
+The `bounding_box` values are pixel coordinates for drawing the result over the
+uploaded image.
+
+## Parking-space identifier syntax
+
+Space IDs use `Rrr-Sss`:
 
 - `Rrr` is the one-based, zero-padded row number.
 - `Sss` is the one-based, zero-padded space number within that row.
-- Rows are assigned in spatial reading order from top to bottom.
-- Spaces within each row are assigned from left to right.
+- Rows are numbered from top to bottom.
+- Spaces within a row are numbered from left to right.
 
-For example, `R03-S08` means the eighth space in the third row. The API returns
-`free_spot_ids` for quick lookup and a complete `rows` collection. Each spot in
-that collection includes `id`, `row`, `number`, `status`, `confidence`, and a
-pixel `bounding_box` (`x_min`, `y_min`, `x_max`, `y_max`) suitable for drawing
-on the uploaded image.
+For example, `R03-S08` identifies the eighth space in the third row.
+
+## Layout limitation
+
+The complete-lot endpoint uses the five-row structure from the included sample
+images: 22, 22, 22, 22, and 12 spaces. Coordinates are normalized, so resized
+versions of that view work. Images from another camera angle or parking lot
+require a separate structure definition.
