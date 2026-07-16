@@ -1,0 +1,211 @@
+{
+  "restaurant": {
+    "id": "demo_001",
+    "name": "Demo Restaurant"
+  },
+  "menu": [
+    {
+      "category": "Breakfast",
+      "sections": [
+        {
+          "name": "BYO",
+          "items": [
+            {
+              "name": "BYO Breakfast Sandwich",
+              "price": "4.30"
+            },
+            {
+              "name": "BYO Breakfast Burrito",
+              "price": "6.45"
+            },
+            {
+              "name": "BYO Loaded Omelet",
+              "price": "6.45"
+            }
+          ]
+        },
+        {
+          "name": "A LA CARTE",
+          "items": [
+            {
+              "name": "Turkey Bacon (2)",
+              "price": "2.60"
+            },
+            {
+              "name": "Nitrate Free Bacon (2)",
+              "price": "2.60"
+            },
+            {
+              "name": "Sausage Links (2)",
+              "price": "2.60"
+            },
+            {
+              "name": "Hashbrowns",
+              "price": "1.85"
+            },
+            {
+              "name": "Tater Tots",
+              "price": "2.10"
+            },
+            {
+              "name": "Buttermilk Pancake",
+              "price": "1.85"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Lunch",
+      "sections": [
+        {
+          "name": "Burgers",
+          "items": [
+            {
+              "name": "Beef",
+              "price": "5.25"
+            },
+            {
+              "name": "Beyond",
+              "price": "6.25"
+            }
+          ]
+        },
+        {
+          "name": "Hot Sandwiches & More",
+          "items": [
+            {
+              "name": "Chicken Tenders with Fries",
+              "price": "9.19"
+            },
+            {
+              "name": "Philly Cheesesteak",
+              "price": "7.75"
+            },
+            {
+              "name": "Chicken Sandwich",
+              "price": "6.99"
+            },
+            {
+              "name": "Chicken Tenders",
+              "price": "7.25"
+            }
+          ]
+        },
+        {
+          "name": "Quesadillas",
+          "items": [
+            {
+              "name": "Fried Chicken Quesadilla",
+              "price": "6.89"
+            },
+            {
+              "name": "Cheese Quesadilla",
+              "price": "4.20"
+            },
+            {
+              "name": "Grilled Chicken Quesadilla",
+              "price": "6.89"
+            }
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            {
+              "name": "French Fries",
+              "price": "2.10"
+            },
+            {
+              "name": "Tater Tots",
+              "price": "2.10"
+            },
+            {
+              "name": "Sweet Potato Fries",
+              "price": "2.40"
+            },
+            {
+              "name": "Onion Rings",
+              "price": "2.40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Butcher & Baker",
+      "sections": [
+        {
+          "name": "Main",
+          "items": [
+            {
+              "name": "Deli Wrap",
+              "price": "6.55 - 6.89"
+            },
+            {
+              "name": "Deli Sandwich",
+              "price": "6.55 - 6.89"
+            },
+            {
+              "name": "Dill Pickle Spear",
+              "price": "0.99"
+            },
+            {
+              "name": "Baker's Chips",
+              "price": "2.05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Beverages",
+      "sections": [
+        {
+          "name": "Soft Drinks",
+          "priceNote": "All beverages are $1.00",
+          "items": [
+            {
+              "name": "Dr. Pepper",
+              "price": "1.00"
+            },
+            {
+              "name": "Coca-Cola",
+              "price": "1.00"
+            },
+            {
+              "name": "Crush: Variety",
+              "price": "1.00"
+            },
+            {
+              "name": "Fanta: Variety",
+              "price": "1.00"
+            },
+            {
+              "name": "Pepsi",
+              "price": "1.00"
+            },
+            {
+              "name": "Mountain Dew",
+              "price": "1.00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Coffee",
+      "sections": [
+        {
+          "name": "Coffee",
+          "items": [
+            {
+              "name": "Coffee",
+              "price": "2.49 - 2.79"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
