@@ -66,11 +66,12 @@ Response:
 ### `POST /api/v1/parking-lot/analyze`
 
 Classifies every known space in a complete image using the layout shared by the
-images in `parking_lot_samples/`. Send the image using the field name `file`.
+six `corporateHeadquarters` images in `parking_lot_samples/`. Send the image
+using the field name `file`.
 
 ```bash
 curl -X POST http://127.0.0.1:8000/api/v1/parking-lot/analyze \
-  -F "file=@parking_lot_samples/parkingLotA.jpg"
+  -F "file=@parking_lot_samples/corporateHeadquartersA.jpg"
 ```
 
 Response structure:
