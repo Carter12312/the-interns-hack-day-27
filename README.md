@@ -1,4 +1,40 @@
-# Parking Lot Occupancy
+# Hub Companion and Parking Intelligence POC
+
+This repository contains two independent applications. Open and run each from
+its own project root:
+
+```text
+the-interns-hack-day-27/
+├── mobile-app/          Kotlin Multiplatform app (Android, iOS, desktop demo)
+├── api/                 FastAPI inference and lot-analysis service
+├── parking-lot-bot/     Model training scripts and notebooks
+├── models/              Trained MobileNet checkpoint
+└── requirements.txt     Python dependencies
+```
+
+## Run the mobile app
+
+You can now open either the repository root or the `mobile-app/` directory in
+Android Studio. The repository root contains a small composite-build bridge
+that imports the self-contained mobile project.
+
+From a terminal:
+
+```bash
+cd mobile-app
+./gradlew :composeApp:assembleDebug
+```
+
+From the repository root, the equivalent command is:
+
+```bash
+./gradlew :mobile-app:composeApp:assembleDebug
+```
+
+The Android application module is `composeApp`. The repository-level Python
+environment and `.idea` run configuration are unrelated to the Android build.
+
+## Parking model
 
 Download the PKLot dataset and create a CSV containing the occupied, empty, and
 total spot counts for every annotated parking-lot image.
@@ -74,6 +110,9 @@ The notebook remains useful for inspecting intermediate crops and charts; the
 Python script runs the same training pipeline from beginning to end.
 
 ## Run the prediction API
+
+The service uses **FastAPI**. It can classify one cropped parking-space image or
+analyze the complete normalized sample-lot layout and return per-space status.
 
 The API accepts a cropped image of one parking space and predicts whether it is
 empty or occupied. Start it from the project root after installing the
