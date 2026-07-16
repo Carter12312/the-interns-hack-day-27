@@ -57,15 +57,33 @@ class ParkingSpotPredictor:
 
     @torch.inference_mode()
     def predict(self, image: Image.Image) -> Prediction:
-        tensor = self.transform(image.convert("RGB")).unsqueeze(0)
-        probabilities = self.model(tensor).softmax(dim=1)[0].tolist()
-        class_probabilities = dict(zip(self.classes, probabilities, strict=True))
-        label = max(class_probabilities, key=class_probabilities.get)  # type: ignore[arg-type]
-        return Prediction(
-            label=label,
-            confidence=class_probabilities[label],
-            probabilities=class_probabilities,
+        return self.predict_many([image])[0]
+
+    @torch.inference_mode()
+    def predict_many(self, images: list[Image.Image]) -> list[Prediction]:
+        """Classify several parking-space crops in one model call."""
+        if not images:
+            return []
+        tensors = torch.stack(
+            [self.transform(image.convert("RGB")) for image in images]
         )
+        batch_probabilities = self.model(tensors).softmax(dim=1).tolist()
+        predictions = []
+        for probabilities in batch_probabilities:
+            class_probabilities = dict(
+                zip(self.classes, probabilities, strict=True)
+            )
+            label = max(
+                class_probabilities, key=class_probabilities.get
+            )  # type: ignore[arg-type]
+            predictions.append(
+                Prediction(
+                    label=label,
+                    confidence=class_probabilities[label],
+                    probabilities=class_probabilities,
+                )
+            )
+        return predictions
 
 
 _predictor: ParkingSpotPredictor | None = None

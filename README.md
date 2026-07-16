@@ -104,3 +104,33 @@ Interactive API documentation is available at `http://127.0.0.1:8000/docs`.
 `GET /health` reports the overall API status, while
 `GET /api/v1/parking-lot/health` reports whether the parking-lot model is
 available.
+
+### Analyze a complete sample parking lot
+
+The eight images in `parking_lot_samples/` share one annotated structure with
+five rows containing 22, 22, 22, 22, and 12 spaces. The API applies this known
+structure to the uploaded image and classifies every space:
+
+```bash
+curl -X POST http://127.0.0.1:8000/api/v1/parking-lot/analyze \
+  -F "file=@parking_lot_samples/parkingLotA.jpg"
+```
+
+This route is intended for the sample camera layout. Its coordinates are
+normalized, so resized versions work, but an image from a different camera or
+lot requires another structure definition.
+
+#### Parking-space identifier syntax
+
+Space IDs use `Rrr-Sss`, where:
+
+- `Rrr` is the one-based, zero-padded row number.
+- `Sss` is the one-based, zero-padded space number within that row.
+- Rows are assigned in spatial reading order from top to bottom.
+- Spaces within each row are assigned from left to right.
+
+For example, `R03-S08` means the eighth space in the third row. The API returns
+`free_spot_ids` for quick lookup and a complete `rows` collection. Each spot in
+that collection includes `id`, `row`, `number`, `status`, `confidence`, and a
+pixel `bounding_box` (`x_min`, `y_min`, `x_max`, `y_max`) suitable for drawing
+on the uploaded image.
