@@ -1,10 +1,5 @@
 # Hub Companion and Parking Intelligence POC
 
-For a workstation using VS Code without Android Studio, follow
-[`VSCODE_DEVELOPMENT.md`](VSCODE_DEVELOPMENT.md). The repository includes VS
-Code tasks and scripts for setup, FastAPI, the emulator, app installation, and
-logs.
-
 This repository contains two independent applications. Open and run each from
 its own project root:
 
