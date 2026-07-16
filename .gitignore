@@ -8,3 +8,14 @@ __pycache__/
 !.idea/runConfigurations/
 !.idea/runConfigurations/Train_MobileNet.xml
 .cache/
+
+# Kotlin Multiplatform / Android Studio
+.gradle/
+.kotlin/
+build/
+**/build/
+local.properties
+*.iml
+*.hprof
+*.logcat
+.DS_Store

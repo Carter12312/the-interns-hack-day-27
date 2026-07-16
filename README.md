@@ -1,4 +1,45 @@
-# Parking Lot API
+# Hub Companion and Parking Intelligence POC
+
+For a workstation using VS Code without Android Studio, follow
+[`VSCODE_DEVELOPMENT.md`](VSCODE_DEVELOPMENT.md). The repository includes VS
+Code tasks and scripts for setup, FastAPI, the emulator, app installation, and
+logs.
+
+This repository contains two independent applications. Open and run each from
+its own project root:
+
+```text
+the-interns-hack-day-27/
+├── mobile-app/          Kotlin Multiplatform app (Android, iOS, desktop demo)
+├── api/                 FastAPI inference and lot-analysis service
+├── parking-lot-bot/     Model training scripts and notebooks
+├── models/              Trained MobileNet checkpoint
+└── requirements.txt     Python dependencies
+```
+
+## Run the mobile app
+
+You can now open either the repository root or the `mobile-app/` directory in
+Android Studio. The repository root contains a small composite-build bridge
+that imports the self-contained mobile project.
+
+From a terminal:
+
+```bash
+cd mobile-app
+./gradlew :composeApp:assembleDebug
+```
+
+From the repository root, the equivalent command is:
+
+```bash
+./gradlew :mobile-app:composeApp:assembleDebug
+```
+
+The Android application module is `composeApp`. The repository-level Python
+environment and `.idea` run configuration are unrelated to the Android build.
+
+## Parking Lot API
 
 The API classifies individual parking spaces and analyzes complete images that
 use the included sample parking-lot layout.
@@ -63,6 +104,21 @@ Response:
 
 `confidence` and the values in `probabilities` range from `0` to `1`.
 
+The Android emulator reaches this local API at `http://10.0.2.2:8000`. Start
+Uvicorn on the development Mac before opening a parking lot in the app:
+
+```bash
+uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+For the POC, the app maps its three lot cards to sample lots A, B, and C. The
+read-only route below runs the model against a repository sample and returns
+the same per-space analysis used by the rendered lot view:
+
+```bash
+curl http://127.0.0.1:8000/api/v1/parking-lot/samples/A/analysis
+```
+
 ### `POST /api/v1/parking-lot/analyze`
 
 Classifies every known space in a complete image using the layout shared by the
@@ -112,6 +168,16 @@ Response structure:
 
 The `bounding_box` values are pixel coordinates for drawing the result over the
 uploaded image.
+
+### Precompute Corporate HQ lots
+
+Corporate HQ lots A-F are served from checked-in inference snapshots so mobile
+requests do not run or load the model. Regenerate the snapshots after changing
+an image, structure, or model:
+
+```bash
+.venv/bin/python parking-lot-bot/precompute_corporate_hq.py
+```
 
 ## Parking-space identifier syntax
 
