@@ -18,15 +18,9 @@ internal data class ParkingSpot(
     val number: Int,
     val available: Boolean,
     val confidence: Double,
-    val xMin: Double,
-    val yMin: Double,
-    val xMax: Double,
-    val yMax: Double,
 )
 
 internal data class ParkingAnalysis(
-    val imageWidth: Int,
-    val imageHeight: Int,
     val totalSpots: Int,
     val freeCount: Int,
     val occupiedCount: Int,
@@ -62,23 +56,16 @@ internal object ParkingRepository {
         val spots = root.getValue("rows").jsonArray.flatMap { rowElement ->
             rowElement.jsonObject.getValue("spots").jsonArray.map { spotElement ->
                 val spot = spotElement.jsonObject
-                val box = spot.getValue("bounding_box").jsonObject
                 ParkingSpot(
                     id = spot.getValue("id").jsonPrimitive.content,
                     row = spot.getValue("row").jsonPrimitive.int,
                     number = spot.getValue("number").jsonPrimitive.int,
                     available = spot.getValue("status").jsonPrimitive.content == "empty",
                     confidence = spot.getValue("confidence").jsonPrimitive.double,
-                    xMin = box.getValue("x_min").jsonPrimitive.double,
-                    yMin = box.getValue("y_min").jsonPrimitive.double,
-                    xMax = box.getValue("x_max").jsonPrimitive.double,
-                    yMax = box.getValue("y_max").jsonPrimitive.double,
                 )
             }
         }
         return ParkingAnalysis(
-            imageWidth = root.getValue("image_width").jsonPrimitive.int,
-            imageHeight = root.getValue("image_height").jsonPrimitive.int,
             totalSpots = root.getValue("total_spots").jsonPrimitive.int,
             freeCount = root.getValue("free_count").jsonPrimitive.int,
             occupiedCount = root.getValue("occupied_count").jsonPrimitive.int,

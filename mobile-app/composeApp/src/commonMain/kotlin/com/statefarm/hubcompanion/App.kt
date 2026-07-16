@@ -820,12 +820,6 @@ private fun Panel(content: @Composable ColumnScope.() -> Unit) {
 }
 
 @Composable
-private fun LocationLabel() = Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-    Box(Modifier.size(10.dp).background(Success, CircleShape))
-    Text("Dallas Hub · Location confirmed", color = Success, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
-}
-
-@Composable
 private fun QuickAction(symbol: String, title: String, detail: String, modifier: Modifier, onClick: () -> Unit) {
     Surface(color = Color.White, shape = RoundedCornerShape(18.dp), border = androidx.compose.foundation.BorderStroke(1.dp, BorderColor), modifier = modifier.clickable(onClick = onClick)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -920,9 +914,4 @@ private fun Suggestion(label: String, color: Color, onClick: () -> Unit) {
     Box(Modifier.background(color, RoundedCornerShape(100.dp)).clickable(onClick = onClick).padding(horizontal = 12.dp, vertical = 8.dp)) {
         Text(label, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.SemiBold)
     }
-}
-
-@Composable
-private fun SectionTitle(title: String) {
-    Text(title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, modifier = Modifier.padding(top = 4.dp))
 }
