@@ -1,0 +1,1360 @@
+{
+  "structure_id": "pklot-sample-layout-v1",
+  "image_width": 640,
+  "image_height": 640,
+  "row_count": 5,
+  "total_spots": 100,
+  "free_count": 7,
+  "occupied_count": 93,
+  "free_spot_ids": [
+    "R05-S02",
+    "R05-S04",
+    "R05-S05",
+    "R05-S08",
+    "R05-S09",
+    "R05-S10",
+    "R05-S12"
+  ],
+  "rows": [
+    {
+      "row": 1,
+      "spot_count": 22,
+      "free_count": 0,
+      "occupied_count": 22,
+      "spots": [
+        {
+          "id": "R01-S01",
+          "row": 1,
+          "number": 1,
+          "status": "occupied",
+          "confidence": 0.9391580820083618,
+          "bounding_box": {
+            "x_min": 139.0,
+            "y_min": 165.0,
+            "x_max": 162.0,
+            "y_max": 205.0
+          }
+        },
+        {
+          "id": "R01-S02",
+          "row": 1,
+          "number": 2,
+          "status": "occupied",
+          "confidence": 0.9990843534469604,
+          "bounding_box": {
+            "x_min": 155.0,
+            "y_min": 165.0,
+            "x_max": 177.5,
+            "y_max": 207.5
+          }
+        },
+        {
+          "id": "R01-S03",
+          "row": 1,
+          "number": 3,
+          "status": "occupied",
+          "confidence": 0.9886032342910767,
+          "bounding_box": {
+            "x_min": 172.0,
+            "y_min": 165.0,
+            "x_max": 193.5,
+            "y_max": 207.5
+          }
+        },
+        {
+          "id": "R01-S04",
+          "row": 1,
+          "number": 4,
+          "status": "occupied",
+          "confidence": 0.9978190660476685,
+          "bounding_box": {
+            "x_min": 188.0,
+            "y_min": 164.0,
+            "x_max": 211.0,
+            "y_max": 206.5
+          }
+        },
+        {
+          "id": "R01-S05",
+          "row": 1,
+          "number": 5,
+          "status": "occupied",
+          "confidence": 0.993024468421936,
+          "bounding_box": {
+            "x_min": 204.0,
+            "y_min": 166.0,
+            "x_max": 225.5,
+            "y_max": 206.0
+          }
+        },
+        {
+          "id": "R01-S06",
+          "row": 1,
+          "number": 6,
+          "status": "occupied",
+          "confidence": 0.9772631525993347,
+          "bounding_box": {
+            "x_min": 231.0,
+            "y_min": 164.0,
+            "x_max": 252.0,
+            "y_max": 205.0
+          }
+        },
+        {
+          "id": "R01-S07",
+          "row": 1,
+          "number": 7,
+          "status": "occupied",
+          "confidence": 0.7951477766036987,
+          "bounding_box": {
+            "x_min": 250.0,
+            "y_min": 166.0,
+            "x_max": 267.5,
+            "y_max": 204.0
+          }
+        },
+        {
+          "id": "R01-S08",
+          "row": 1,
+          "number": 8,
+          "status": "occupied",
+          "confidence": 0.9615817070007324,
+          "bounding_box": {
+            "x_min": 267.0,
+            "y_min": 166.0,
+            "x_max": 283.5,
+            "y_max": 207.0
+          }
+        },
+        {
+          "id": "R01-S09",
+          "row": 1,
+          "number": 9,
+          "status": "occupied",
+          "confidence": 0.974452793598175,
+          "bounding_box": {
+            "x_min": 283.0,
+            "y_min": 164.0,
+            "x_max": 300.0,
+            "y_max": 205.0
+          }
+        },
+        {
+          "id": "R01-S10",
+          "row": 1,
+          "number": 10,
+          "status": "occupied",
+          "confidence": 0.9978293776512146,
+          "bounding_box": {
+            "x_min": 299.0,
+            "y_min": 166.0,
+            "x_max": 317.0,
+            "y_max": 205.0
+          }
+        },
+        {
+          "id": "R01-S11",
+          "row": 1,
+          "number": 11,
+          "status": "occupied",
+          "confidence": 0.9757983684539795,
+          "bounding_box": {
+            "x_min": 316.0,
+            "y_min": 166.0,
+            "x_max": 332.0,
+            "y_max": 200.5
+          }
+        },
+        {
+          "id": "R01-S12",
+          "row": 1,
+          "number": 12,
+          "status": "occupied",
+          "confidence": 0.9520052671432495,
+          "bounding_box": {
+            "x_min": 333.0,
+            "y_min": 165.0,
+            "x_max": 350.0,
+            "y_max": 201.5
+          }
+        },
+        {
+          "id": "R01-S13",
+          "row": 1,
+          "number": 13,
+          "status": "occupied",
+          "confidence": 0.9970893263816833,
+          "bounding_box": {
+            "x_min": 351.0,
+            "y_min": 164.0,
+            "x_max": 367.0,
+            "y_max": 198.0
+          }
+        },
+        {
+          "id": "R01-S14",
+          "row": 1,
+          "number": 14,
+          "status": "occupied",
+          "confidence": 0.9888797998428345,
+          "bounding_box": {
+            "x_min": 368.0,
+            "y_min": 162.0,
+            "x_max": 386.5,
+            "y_max": 200.0
+          }
+        },
+        {
+          "id": "R01-S15",
+          "row": 1,
+          "number": 15,
+          "status": "occupied",
+          "confidence": 0.9936468601226807,
+          "bounding_box": {
+            "x_min": 388.0,
+            "y_min": 162.0,
+            "x_max": 404.0,
+            "y_max": 200.0
+          }
+        },
+        {
+          "id": "R01-S16",
+          "row": 1,
+          "number": 16,
+          "status": "occupied",
+          "confidence": 0.9927152991294861,
+          "bounding_box": {
+            "x_min": 403.0,
+            "y_min": 163.0,
+            "x_max": 420.5,
+            "y_max": 197.5
+          }
+        },
+        {
+          "id": "R01-S17",
+          "row": 1,
+          "number": 17,
+          "status": "occupied",
+          "confidence": 0.9947130084037781,
+          "bounding_box": {
+            "x_min": 422.0,
+            "y_min": 163.0,
+            "x_max": 439.5,
+            "y_max": 197.5
+          }
+        },
+        {
+          "id": "R01-S18",
+          "row": 1,
+          "number": 18,
+          "status": "occupied",
+          "confidence": 0.9955288767814636,
+          "bounding_box": {
+            "x_min": 440.0,
+            "y_min": 162.0,
+            "x_max": 457.5,
+            "y_max": 195.0
+          }
+        },
+        {
+          "id": "R01-S19",
+          "row": 1,
+          "number": 19,
+          "status": "occupied",
+          "confidence": 0.9994787573814392,
+          "bounding_box": {
+            "x_min": 458.0,
+            "y_min": 162.0,
+            "x_max": 477.5,
+            "y_max": 197.5
+          }
+        },
+        {
+          "id": "R01-S20",
+          "row": 1,
+          "number": 20,
+          "status": "occupied",
+          "confidence": 0.9974324107170105,
+          "bounding_box": {
+            "x_min": 478.0,
+            "y_min": 158.0,
+            "x_max": 496.0,
+            "y_max": 198.0
+          }
+        },
+        {
+          "id": "R01-S21",
+          "row": 1,
+          "number": 21,
+          "status": "occupied",
+          "confidence": 0.994866132736206,
+          "bounding_box": {
+            "x_min": 494.0,
+            "y_min": 160.0,
+            "x_max": 514.0,
+            "y_max": 194.5
+          }
+        },
+        {
+          "id": "R01-S22",
+          "row": 1,
+          "number": 22,
+          "status": "occupied",
+          "confidence": 0.988264799118042,
+          "bounding_box": {
+            "x_min": 511.0,
+            "y_min": 156.0,
+            "x_max": 534.0,
+            "y_max": 196.0
+          }
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "spot_count": 22,
+      "free_count": 0,
+      "occupied_count": 22,
+      "spots": [
+        {
+          "id": "R02-S01",
+          "row": 2,
+          "number": 1,
+          "status": "occupied",
+          "confidence": 0.9309808015823364,
+          "bounding_box": {
+            "x_min": 113.0,
+            "y_min": 238.0,
+            "x_max": 140.0,
+            "y_max": 276.0
+          }
+        },
+        {
+          "id": "R02-S02",
+          "row": 2,
+          "number": 2,
+          "status": "occupied",
+          "confidence": 0.9717981219291687,
+          "bounding_box": {
+            "x_min": 130.0,
+            "y_min": 236.0,
+            "x_max": 156.5,
+            "y_max": 276.0
+          }
+        },
+        {
+          "id": "R02-S03",
+          "row": 2,
+          "number": 3,
+          "status": "occupied",
+          "confidence": 0.8127892017364502,
+          "bounding_box": {
+            "x_min": 148.0,
+            "y_min": 237.0,
+            "x_max": 172.5,
+            "y_max": 278.0
+          }
+        },
+        {
+          "id": "R02-S04",
+          "row": 2,
+          "number": 4,
+          "status": "occupied",
+          "confidence": 0.9961761236190796,
+          "bounding_box": {
+            "x_min": 167.0,
+            "y_min": 238.0,
+            "x_max": 192.5,
+            "y_max": 275.5
+          }
+        },
+        {
+          "id": "R02-S05",
+          "row": 2,
+          "number": 5,
+          "status": "occupied",
+          "confidence": 0.982176661491394,
+          "bounding_box": {
+            "x_min": 188.0,
+            "y_min": 239.0,
+            "x_max": 211.5,
+            "y_max": 278.0
+          }
+        },
+        {
+          "id": "R02-S06",
+          "row": 2,
+          "number": 6,
+          "status": "occupied",
+          "confidence": 0.9816800355911255,
+          "bounding_box": {
+            "x_min": 213.0,
+            "y_min": 239.0,
+            "x_max": 235.5,
+            "y_max": 275.5
+          }
+        },
+        {
+          "id": "R02-S07",
+          "row": 2,
+          "number": 7,
+          "status": "occupied",
+          "confidence": 0.9837506413459778,
+          "bounding_box": {
+            "x_min": 229.0,
+            "y_min": 238.0,
+            "x_max": 251.5,
+            "y_max": 277.0
+          }
+        },
+        {
+          "id": "R02-S08",
+          "row": 2,
+          "number": 8,
+          "status": "occupied",
+          "confidence": 0.9965294003486633,
+          "bounding_box": {
+            "x_min": 251.0,
+            "y_min": 235.0,
+            "x_max": 272.5,
+            "y_max": 272.5
+          }
+        },
+        {
+          "id": "R02-S09",
+          "row": 2,
+          "number": 9,
+          "status": "occupied",
+          "confidence": 0.7968086004257202,
+          "bounding_box": {
+            "x_min": 268.0,
+            "y_min": 236.0,
+            "x_max": 289.5,
+            "y_max": 272.5
+          }
+        },
+        {
+          "id": "R02-S10",
+          "row": 2,
+          "number": 10,
+          "status": "occupied",
+          "confidence": 0.9744739532470703,
+          "bounding_box": {
+            "x_min": 287.0,
+            "y_min": 234.0,
+            "x_max": 309.5,
+            "y_max": 274.0
+          }
+        },
+        {
+          "id": "R02-S11",
+          "row": 2,
+          "number": 11,
+          "status": "occupied",
+          "confidence": 0.9832392334938049,
+          "bounding_box": {
+            "x_min": 307.0,
+            "y_min": 234.0,
+            "x_max": 327.5,
+            "y_max": 273.0
+          }
+        },
+        {
+          "id": "R02-S12",
+          "row": 2,
+          "number": 12,
+          "status": "occupied",
+          "confidence": 0.9964050054550171,
+          "bounding_box": {
+            "x_min": 324.0,
+            "y_min": 235.0,
+            "x_max": 344.0,
+            "y_max": 273.0
+          }
+        },
+        {
+          "id": "R02-S13",
+          "row": 2,
+          "number": 13,
+          "status": "occupied",
+          "confidence": 0.9878487586975098,
+          "bounding_box": {
+            "x_min": 345.0,
+            "y_min": 231.0,
+            "x_max": 364.0,
+            "y_max": 274.5
+          }
+        },
+        {
+          "id": "R02-S14",
+          "row": 2,
+          "number": 14,
+          "status": "occupied",
+          "confidence": 0.9831151366233826,
+          "bounding_box": {
+            "x_min": 364.0,
+            "y_min": 235.0,
+            "x_max": 383.0,
+            "y_max": 273.0
+          }
+        },
+        {
+          "id": "R02-S15",
+          "row": 2,
+          "number": 15,
+          "status": "occupied",
+          "confidence": 0.9911655783653259,
+          "bounding_box": {
+            "x_min": 382.0,
+            "y_min": 231.0,
+            "x_max": 404.0,
+            "y_max": 272.0
+          }
+        },
+        {
+          "id": "R02-S16",
+          "row": 2,
+          "number": 16,
+          "status": "occupied",
+          "confidence": 0.9794281125068665,
+          "bounding_box": {
+            "x_min": 404.0,
+            "y_min": 226.0,
+            "x_max": 423.5,
+            "y_max": 272.0
+          }
+        },
+        {
+          "id": "R02-S17",
+          "row": 2,
+          "number": 17,
+          "status": "occupied",
+          "confidence": 0.9535016417503357,
+          "bounding_box": {
+            "x_min": 425.0,
+            "y_min": 229.0,
+            "x_max": 445.0,
+            "y_max": 276.0
+          }
+        },
+        {
+          "id": "R02-S18",
+          "row": 2,
+          "number": 18,
+          "status": "occupied",
+          "confidence": 0.9969969987869263,
+          "bounding_box": {
+            "x_min": 443.0,
+            "y_min": 226.0,
+            "x_max": 466.0,
+            "y_max": 273.0
+          }
+        },
+        {
+          "id": "R02-S19",
+          "row": 2,
+          "number": 19,
+          "status": "occupied",
+          "confidence": 0.9935970306396484,
+          "bounding_box": {
+            "x_min": 464.0,
+            "y_min": 228.0,
+            "x_max": 484.5,
+            "y_max": 272.5
+          }
+        },
+        {
+          "id": "R02-S20",
+          "row": 2,
+          "number": 20,
+          "status": "occupied",
+          "confidence": 0.997676432132721,
+          "bounding_box": {
+            "x_min": 483.0,
+            "y_min": 227.0,
+            "x_max": 507.0,
+            "y_max": 275.0
+          }
+        },
+        {
+          "id": "R02-S21",
+          "row": 2,
+          "number": 21,
+          "status": "occupied",
+          "confidence": 0.9900063872337341,
+          "bounding_box": {
+            "x_min": 505.0,
+            "y_min": 227.0,
+            "x_max": 526.5,
+            "y_max": 272.5
+          }
+        },
+        {
+          "id": "R02-S22",
+          "row": 2,
+          "number": 22,
+          "status": "occupied",
+          "confidence": 0.8645203709602356,
+          "bounding_box": {
+            "x_min": 525.0,
+            "y_min": 229.0,
+            "x_max": 548.5,
+            "y_max": 271.5
+          }
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "spot_count": 22,
+      "free_count": 0,
+      "occupied_count": 22,
+      "spots": [
+        {
+          "id": "R03-S01",
+          "row": 3,
+          "number": 1,
+          "status": "occupied",
+          "confidence": 0.99908447265625,
+          "bounding_box": {
+            "x_min": 101.0,
+            "y_min": 270.0,
+            "x_max": 124.5,
+            "y_max": 320.5
+          }
+        },
+        {
+          "id": "R03-S02",
+          "row": 3,
+          "number": 2,
+          "status": "occupied",
+          "confidence": 0.9987784028053284,
+          "bounding_box": {
+            "x_min": 117.0,
+            "y_min": 271.0,
+            "x_max": 145.5,
+            "y_max": 322.5
+          }
+        },
+        {
+          "id": "R03-S03",
+          "row": 3,
+          "number": 3,
+          "status": "occupied",
+          "confidence": 0.9569041132926941,
+          "bounding_box": {
+            "x_min": 136.0,
+            "y_min": 267.0,
+            "x_max": 161.5,
+            "y_max": 320.5
+          }
+        },
+        {
+          "id": "R03-S04",
+          "row": 3,
+          "number": 4,
+          "status": "occupied",
+          "confidence": 0.9987758994102478,
+          "bounding_box": {
+            "x_min": 154.0,
+            "y_min": 274.0,
+            "x_max": 180.0,
+            "y_max": 324.5
+          }
+        },
+        {
+          "id": "R03-S05",
+          "row": 3,
+          "number": 5,
+          "status": "occupied",
+          "confidence": 0.9976387023925781,
+          "bounding_box": {
+            "x_min": 174.0,
+            "y_min": 272.0,
+            "x_max": 197.5,
+            "y_max": 323.5
+          }
+        },
+        {
+          "id": "R03-S06",
+          "row": 3,
+          "number": 6,
+          "status": "occupied",
+          "confidence": 0.9971799850463867,
+          "bounding_box": {
+            "x_min": 205.0,
+            "y_min": 273.0,
+            "x_max": 224.5,
+            "y_max": 327.0
+          }
+        },
+        {
+          "id": "R03-S07",
+          "row": 3,
+          "number": 7,
+          "status": "occupied",
+          "confidence": 0.9977027773857117,
+          "bounding_box": {
+            "x_min": 222.0,
+            "y_min": 272.0,
+            "x_max": 249.0,
+            "y_max": 325.5
+          }
+        },
+        {
+          "id": "R03-S08",
+          "row": 3,
+          "number": 8,
+          "status": "occupied",
+          "confidence": 0.9981829524040222,
+          "bounding_box": {
+            "x_min": 241.0,
+            "y_min": 275.0,
+            "x_max": 265.0,
+            "y_max": 325.0
+          }
+        },
+        {
+          "id": "R03-S09",
+          "row": 3,
+          "number": 9,
+          "status": "occupied",
+          "confidence": 0.9926984906196594,
+          "bounding_box": {
+            "x_min": 262.0,
+            "y_min": 270.0,
+            "x_max": 286.0,
+            "y_max": 323.5
+          }
+        },
+        {
+          "id": "R03-S10",
+          "row": 3,
+          "number": 10,
+          "status": "occupied",
+          "confidence": 0.9887086749076843,
+          "bounding_box": {
+            "x_min": 282.0,
+            "y_min": 276.0,
+            "x_max": 301.5,
+            "y_max": 324.0
+          }
+        },
+        {
+          "id": "R03-S11",
+          "row": 3,
+          "number": 11,
+          "status": "occupied",
+          "confidence": 0.996907651424408,
+          "bounding_box": {
+            "x_min": 303.0,
+            "y_min": 276.0,
+            "x_max": 324.0,
+            "y_max": 324.0
+          }
+        },
+        {
+          "id": "R03-S12",
+          "row": 3,
+          "number": 12,
+          "status": "occupied",
+          "confidence": 0.9816868305206299,
+          "bounding_box": {
+            "x_min": 322.0,
+            "y_min": 277.0,
+            "x_max": 343.0,
+            "y_max": 322.5
+          }
+        },
+        {
+          "id": "R03-S13",
+          "row": 3,
+          "number": 13,
+          "status": "occupied",
+          "confidence": 0.9266251921653748,
+          "bounding_box": {
+            "x_min": 345.0,
+            "y_min": 275.0,
+            "x_max": 362.0,
+            "y_max": 320.5
+          }
+        },
+        {
+          "id": "R03-S14",
+          "row": 3,
+          "number": 14,
+          "status": "occupied",
+          "confidence": 0.9781161546707153,
+          "bounding_box": {
+            "x_min": 363.0,
+            "y_min": 276.0,
+            "x_max": 383.5,
+            "y_max": 321.5
+          }
+        },
+        {
+          "id": "R03-S15",
+          "row": 3,
+          "number": 15,
+          "status": "occupied",
+          "confidence": 0.9899582266807556,
+          "bounding_box": {
+            "x_min": 384.0,
+            "y_min": 276.0,
+            "x_max": 402.5,
+            "y_max": 322.0
+          }
+        },
+        {
+          "id": "R03-S16",
+          "row": 3,
+          "number": 16,
+          "status": "occupied",
+          "confidence": 0.9972409009933472,
+          "bounding_box": {
+            "x_min": 404.0,
+            "y_min": 274.0,
+            "x_max": 424.0,
+            "y_max": 320.0
+          }
+        },
+        {
+          "id": "R03-S17",
+          "row": 3,
+          "number": 17,
+          "status": "occupied",
+          "confidence": 0.9973700046539307,
+          "bounding_box": {
+            "x_min": 426.0,
+            "y_min": 276.0,
+            "x_max": 446.0,
+            "y_max": 321.5
+          }
+        },
+        {
+          "id": "R03-S18",
+          "row": 3,
+          "number": 18,
+          "status": "occupied",
+          "confidence": 0.990018367767334,
+          "bounding_box": {
+            "x_min": 444.0,
+            "y_min": 277.0,
+            "x_max": 467.0,
+            "y_max": 319.5
+          }
+        },
+        {
+          "id": "R03-S19",
+          "row": 3,
+          "number": 19,
+          "status": "occupied",
+          "confidence": 0.9844567179679871,
+          "bounding_box": {
+            "x_min": 467.0,
+            "y_min": 275.0,
+            "x_max": 488.0,
+            "y_max": 322.0
+          }
+        },
+        {
+          "id": "R03-S20",
+          "row": 3,
+          "number": 20,
+          "status": "occupied",
+          "confidence": 0.9977438449859619,
+          "bounding_box": {
+            "x_min": 486.0,
+            "y_min": 273.0,
+            "x_max": 511.0,
+            "y_max": 320.0
+          }
+        },
+        {
+          "id": "R03-S21",
+          "row": 3,
+          "number": 21,
+          "status": "occupied",
+          "confidence": 0.9962627291679382,
+          "bounding_box": {
+            "x_min": 509.0,
+            "y_min": 276.0,
+            "x_max": 531.5,
+            "y_max": 319.5
+          }
+        },
+        {
+          "id": "R03-S22",
+          "row": 3,
+          "number": 22,
+          "status": "occupied",
+          "confidence": 0.9467438459396362,
+          "bounding_box": {
+            "x_min": 530.0,
+            "y_min": 270.0,
+            "x_max": 557.0,
+            "y_max": 318.0
+          }
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "spot_count": 22,
+      "free_count": 0,
+      "occupied_count": 22,
+      "spots": [
+        {
+          "id": "R04-S01",
+          "row": 4,
+          "number": 1,
+          "status": "occupied",
+          "confidence": 0.9570464491844177,
+          "bounding_box": {
+            "x_min": 64.0,
+            "y_min": 367.0,
+            "x_max": 93.0,
+            "y_max": 420.5
+          }
+        },
+        {
+          "id": "R04-S02",
+          "row": 4,
+          "number": 2,
+          "status": "occupied",
+          "confidence": 0.9881261587142944,
+          "bounding_box": {
+            "x_min": 83.0,
+            "y_min": 371.0,
+            "x_max": 112.0,
+            "y_max": 421.0
+          }
+        },
+        {
+          "id": "R04-S03",
+          "row": 4,
+          "number": 3,
+          "status": "occupied",
+          "confidence": 0.9996335506439209,
+          "bounding_box": {
+            "x_min": 106.0,
+            "y_min": 371.0,
+            "x_max": 134.5,
+            "y_max": 421.5
+          }
+        },
+        {
+          "id": "R04-S04",
+          "row": 4,
+          "number": 4,
+          "status": "occupied",
+          "confidence": 0.9964816570281982,
+          "bounding_box": {
+            "x_min": 127.0,
+            "y_min": 370.0,
+            "x_max": 153.5,
+            "y_max": 420.0
+          }
+        },
+        {
+          "id": "R04-S05",
+          "row": 4,
+          "number": 5,
+          "status": "occupied",
+          "confidence": 0.9887948036193848,
+          "bounding_box": {
+            "x_min": 148.0,
+            "y_min": 374.0,
+            "x_max": 175.0,
+            "y_max": 422.0
+          }
+        },
+        {
+          "id": "R04-S06",
+          "row": 4,
+          "number": 6,
+          "status": "occupied",
+          "confidence": 0.9378569722175598,
+          "bounding_box": {
+            "x_min": 181.0,
+            "y_min": 373.0,
+            "x_max": 206.0,
+            "y_max": 418.5
+          }
+        },
+        {
+          "id": "R04-S07",
+          "row": 4,
+          "number": 7,
+          "status": "occupied",
+          "confidence": 0.9998356103897095,
+          "bounding_box": {
+            "x_min": 203.0,
+            "y_min": 370.0,
+            "x_max": 229.0,
+            "y_max": 420.0
+          }
+        },
+        {
+          "id": "R04-S08",
+          "row": 4,
+          "number": 8,
+          "status": "occupied",
+          "confidence": 0.9993884563446045,
+          "bounding_box": {
+            "x_min": 223.0,
+            "y_min": 370.0,
+            "x_max": 254.0,
+            "y_max": 424.0
+          }
+        },
+        {
+          "id": "R04-S09",
+          "row": 4,
+          "number": 9,
+          "status": "occupied",
+          "confidence": 0.9960055947303772,
+          "bounding_box": {
+            "x_min": 246.0,
+            "y_min": 372.0,
+            "x_max": 272.5,
+            "y_max": 422.5
+          }
+        },
+        {
+          "id": "R04-S10",
+          "row": 4,
+          "number": 10,
+          "status": "occupied",
+          "confidence": 0.9969263672828674,
+          "bounding_box": {
+            "x_min": 268.0,
+            "y_min": 373.0,
+            "x_max": 294.5,
+            "y_max": 424.5
+          }
+        },
+        {
+          "id": "R04-S11",
+          "row": 4,
+          "number": 11,
+          "status": "occupied",
+          "confidence": 0.9962300658226013,
+          "bounding_box": {
+            "x_min": 290.0,
+            "y_min": 372.0,
+            "x_max": 313.0,
+            "y_max": 423.5
+          }
+        },
+        {
+          "id": "R04-S12",
+          "row": 4,
+          "number": 12,
+          "status": "occupied",
+          "confidence": 0.9855550527572632,
+          "bounding_box": {
+            "x_min": 312.0,
+            "y_min": 372.0,
+            "x_max": 335.5,
+            "y_max": 428.0
+          }
+        },
+        {
+          "id": "R04-S13",
+          "row": 4,
+          "number": 13,
+          "status": "occupied",
+          "confidence": 0.9978119134902954,
+          "bounding_box": {
+            "x_min": 335.0,
+            "y_min": 373.0,
+            "x_max": 359.0,
+            "y_max": 423.0
+          }
+        },
+        {
+          "id": "R04-S14",
+          "row": 4,
+          "number": 14,
+          "status": "occupied",
+          "confidence": 0.9993005990982056,
+          "bounding_box": {
+            "x_min": 359.0,
+            "y_min": 371.0,
+            "x_max": 382.0,
+            "y_max": 426.0
+          }
+        },
+        {
+          "id": "R04-S15",
+          "row": 4,
+          "number": 15,
+          "status": "occupied",
+          "confidence": 0.9992678761482239,
+          "bounding_box": {
+            "x_min": 382.0,
+            "y_min": 371.0,
+            "x_max": 405.0,
+            "y_max": 423.5
+          }
+        },
+        {
+          "id": "R04-S16",
+          "row": 4,
+          "number": 16,
+          "status": "occupied",
+          "confidence": 0.9992332458496094,
+          "bounding_box": {
+            "x_min": 405.0,
+            "y_min": 374.0,
+            "x_max": 428.5,
+            "y_max": 426.5
+          }
+        },
+        {
+          "id": "R04-S17",
+          "row": 4,
+          "number": 17,
+          "status": "occupied",
+          "confidence": 0.9992954730987549,
+          "bounding_box": {
+            "x_min": 428.0,
+            "y_min": 375.0,
+            "x_max": 454.5,
+            "y_max": 428.5
+          }
+        },
+        {
+          "id": "R04-S18",
+          "row": 4,
+          "number": 18,
+          "status": "occupied",
+          "confidence": 0.9992244243621826,
+          "bounding_box": {
+            "x_min": 452.0,
+            "y_min": 374.0,
+            "x_max": 479.0,
+            "y_max": 426.5
+          }
+        },
+        {
+          "id": "R04-S19",
+          "row": 4,
+          "number": 19,
+          "status": "occupied",
+          "confidence": 0.9949866533279419,
+          "bounding_box": {
+            "x_min": 476.0,
+            "y_min": 372.0,
+            "x_max": 502.0,
+            "y_max": 429.0
+          }
+        },
+        {
+          "id": "R04-S20",
+          "row": 4,
+          "number": 20,
+          "status": "occupied",
+          "confidence": 0.9956592321395874,
+          "bounding_box": {
+            "x_min": 499.0,
+            "y_min": 373.0,
+            "x_max": 527.5,
+            "y_max": 431.5
+          }
+        },
+        {
+          "id": "R04-S21",
+          "row": 4,
+          "number": 21,
+          "status": "occupied",
+          "confidence": 0.9922278523445129,
+          "bounding_box": {
+            "x_min": 523.0,
+            "y_min": 371.0,
+            "x_max": 549.5,
+            "y_max": 428.0
+          }
+        },
+        {
+          "id": "R04-S22",
+          "row": 4,
+          "number": 22,
+          "status": "occupied",
+          "confidence": 0.9723091721534729,
+          "bounding_box": {
+            "x_min": 545.0,
+            "y_min": 370.0,
+            "x_max": 576.0,
+            "y_max": 426.0
+          }
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "spot_count": 12,
+      "free_count": 7,
+      "occupied_count": 5,
+      "spots": [
+        {
+          "id": "R05-S01",
+          "row": 5,
+          "number": 1,
+          "status": "occupied",
+          "confidence": 0.8442353010177612,
+          "bounding_box": {
+            "x_min": 21.0,
+            "y_min": 446.0,
+            "x_max": 55.0,
+            "y_max": 494.0
+          }
+        },
+        {
+          "id": "R05-S02",
+          "row": 5,
+          "number": 2,
+          "status": "empty",
+          "confidence": 0.9999059438705444,
+          "bounding_box": {
+            "x_min": 43.0,
+            "y_min": 445.0,
+            "x_max": 78.5,
+            "y_max": 499.0
+          }
+        },
+        {
+          "id": "R05-S03",
+          "row": 5,
+          "number": 3,
+          "status": "occupied",
+          "confidence": 0.9948325157165527,
+          "bounding_box": {
+            "x_min": 71.0,
+            "y_min": 446.0,
+            "x_max": 106.0,
+            "y_max": 501.0
+          }
+        },
+        {
+          "id": "R05-S04",
+          "row": 5,
+          "number": 4,
+          "status": "empty",
+          "confidence": 0.9993106126785278,
+          "bounding_box": {
+            "x_min": 94.0,
+            "y_min": 445.0,
+            "x_max": 132.0,
+            "y_max": 502.0
+          }
+        },
+        {
+          "id": "R05-S05",
+          "row": 5,
+          "number": 5,
+          "status": "empty",
+          "confidence": 0.9982613921165466,
+          "bounding_box": {
+            "x_min": 123.0,
+            "y_min": 442.0,
+            "x_max": 157.5,
+            "y_max": 501.5
+          }
+        },
+        {
+          "id": "R05-S06",
+          "row": 5,
+          "number": 6,
+          "status": "occupied",
+          "confidence": 0.9988061189651489,
+          "bounding_box": {
+            "x_min": 148.0,
+            "y_min": 444.0,
+            "x_max": 182.0,
+            "y_max": 500.0
+          }
+        },
+        {
+          "id": "R05-S07",
+          "row": 5,
+          "number": 7,
+          "status": "occupied",
+          "confidence": 0.9813740849494934,
+          "bounding_box": {
+            "x_min": 175.0,
+            "y_min": 445.0,
+            "x_max": 208.5,
+            "y_max": 495.5
+          }
+        },
+        {
+          "id": "R05-S08",
+          "row": 5,
+          "number": 8,
+          "status": "empty",
+          "confidence": 0.999996542930603,
+          "bounding_box": {
+            "x_min": 204.0,
+            "y_min": 448.0,
+            "x_max": 237.5,
+            "y_max": 498.5
+          }
+        },
+        {
+          "id": "R05-S09",
+          "row": 5,
+          "number": 9,
+          "status": "empty",
+          "confidence": 0.9999133348464966,
+          "bounding_box": {
+            "x_min": 231.0,
+            "y_min": 451.0,
+            "x_max": 264.0,
+            "y_max": 504.5
+          }
+        },
+        {
+          "id": "R05-S10",
+          "row": 5,
+          "number": 10,
+          "status": "empty",
+          "confidence": 0.9997692704200745,
+          "bounding_box": {
+            "x_min": 259.0,
+            "y_min": 448.0,
+            "x_max": 290.5,
+            "y_max": 500.5
+          }
+        },
+        {
+          "id": "R05-S11",
+          "row": 5,
+          "number": 11,
+          "status": "occupied",
+          "confidence": 0.9986359477043152,
+          "bounding_box": {
+            "x_min": 288.0,
+            "y_min": 449.0,
+            "x_max": 314.5,
+            "y_max": 504.0
+          }
+        },
+        {
+          "id": "R05-S12",
+          "row": 5,
+          "number": 12,
+          "status": "empty",
+          "confidence": 0.999620795249939,
+          "bounding_box": {
+            "x_min": 312.0,
+            "y_min": 451.0,
+            "x_max": 341.5,
+            "y_max": 507.0
+          }
+        }
+      ]
+    }
+  ]
+}

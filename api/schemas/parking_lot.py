@@ -35,6 +35,8 @@ class RowResult(BaseModel):
 
 class LotAnalysisResponse(BaseModel):
     structure_id: str
+    image_width: int
+    image_height: int
     row_count: int
     total_spots: int
     free_count: int

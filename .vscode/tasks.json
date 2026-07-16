@@ -1,0 +1,58 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Hub: Setup workstation",
+      "type": "shell",
+      "command": "./scripts/dev/setup.sh",
+      "windows": {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\dev\\setup.ps1"
+      },
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Hub: Start FastAPI",
+      "type": "shell",
+      "command": "./scripts/dev/api.sh",
+      "windows": {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\dev\\api.ps1"
+      },
+      "options": { "cwd": "${workspaceFolder}" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Hub: Start emulator",
+      "type": "shell",
+      "command": "./scripts/dev/emulator.sh",
+      "windows": {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\dev\\emulator.ps1"
+      },
+      "options": { "cwd": "${workspaceFolder}" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Hub: Build, install, and launch Android",
+      "type": "shell",
+      "command": "./scripts/dev/app.sh",
+      "windows": {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\dev\\app.ps1"
+      },
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$gradle"]
+    },
+    {
+      "label": "Hub: Android logs",
+      "type": "shell",
+      "command": "./scripts/dev/logs.sh",
+      "windows": {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\dev\\logs.ps1"
+      },
+      "options": { "cwd": "${workspaceFolder}" },
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
